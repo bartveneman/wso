@@ -1,0 +1,25 @@
+$navy: #0B486B
+$blue: #1690d6
+$black: #242424
+$green: #3f815f
+$white: #fff
+$gray: #ddd
+$coal: #333
+$shade: #eee
+$orange: #f9461c
+
+=mq($bp: 33em)
+	@media (min-width: $bp)
+		@content
+
+=clearfix
+	&:after
+		content: ''
+		display: table
+		clear: both
+
+.cf
+	+clearfix
+
+@function shade($color, $amount: 92%)
+	@return mix($color, $black, $amount)

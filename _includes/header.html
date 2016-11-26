@@ -1,0 +1,23 @@
+<header class="site-header page-wrap">
+  <div class="row">
+    <div class="init-4 cols">
+      {% if page.title == null %}
+        <h1>
+      {% endif %}
+        <a href="{{ site.baseurl }}/" class="site-title">
+          <span>Whisky</span>
+          <span>Soci&euml;teit</span>
+          <span>Ommen</span>
+        </a>
+      {% if page.title == null %}
+        </h1>
+      {% endif %}
+    </div>
+    <div class="init-8 cols">
+      <nav class="site-nav">
+        <a class="site-nav__item" href="{{ site.baseurl }}/over-wso/">Over WSO</a>
+        <a class="site-nav__item" href="{{ site.baseurl }}/proeverijen/">Proeverijen</a>
+      </nav>
+    </div>
+  </div>
+</header>

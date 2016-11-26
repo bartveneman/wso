@@ -1,0 +1,43 @@
+.ui-usp
+	+mq
+		display: flex
+		align-items: flex-start
+		flex-flow: row wrap
+		justify-content: space-between
+
+.ui-usp__item
+	margin-bottom: 1em
+	list-style: none
+	width: 100%
+	.icon
+		margin-right: .36em
+		fill: $green
+		width: 2.16em
+		height: 2.16em
+	+mq
+		width: 45%
+	+mq(60em)
+		width: 30%
+	+mq(100em)
+		width: 15%
+
+.ui-card
+	position: relative
+	float: left
+	margin-right: 1em
+	margin-bottom: 1em
+	width: 16em
+	padding-bottom: 11em
+	background: $navy
+	overflow: hidden
+
+.ui-card__title
+	font-size: 2em
+	font-weight: bold
+	color: $white
+	position: absolute
+	left: .4em
+	bottom: .4em
+	line-height: .88em
+	span
+		display: block

@@ -1,0 +1,105 @@
+h1, h2, h3, h4, h5, h6,
+blockquote, p,
+ul, ol, dl
+	margin: 0
+	padding: 0
+
+ul,
+ol
+	padding: 0
+	list-style: none
+
+html
+	font-family: 'Georgia', sans-serif
+	color: $coal
+
+=heading
+	font-family: 'Open Sans Condensed'
+	font-size: 1em
+	font-weight: 700
+	text-transform: uppercase
+	color: $black
+
+h1, h2, h3, h4, h5, h6, .h
+	+heading
+
+.h1
+	font-size: 2.4em
+
+.h2
+	font-size: 1.85em
+
+.h3
+	font-size: 1.5em
+
+.h4
+	font-size: 1.25em
+
+.h5
+	font-size: 1em
+
+a
+	color: inherit
+	&:focus
+		outline: 1px dotted
+
+time
+	white-space: nowrap
+	word-wrap: normal
+
+fieldset
+	border: none
+	padding: 0
+
+legend
+	display: none
+
+label
+	cursor: pointer
+
+.text
+	h1, h2, h3, h4, h5, h6, .h
+		margin-bottom: .72rem
+		line-height: 1.2
+
+	p, ol ,ul
+		line-height: 1.44
+		margin-bottom: 1.44em
+
+	ol, ul
+		margin-left: 1.44em
+		+mq
+			margin-left: 0
+
+	ol
+		list-style-type: decimal
+
+	ul
+		list-style-type: square
+
+	p, li
+		max-width: 33em
+
+p a
+	color: $blue
+	&:hover
+		color: $coal
+
+.text-right
+	text-align: right
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.site-title
+	+heading
+	line-height: 1.2
+	display: inline-block
+	text-decoration: none
+	span
+		display: block
+	&:hover
+		color: $navy

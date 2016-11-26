@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% assign points = '' %}
+
+{% for point in page.map_points %}
+	{% assign name = 'pin-m' %}
+	{% assign color = 'f9461c' | prepend:'+' %}
+	{% assign long = point.long | append:',' | prepend:'(' %}
+	{% assign longlat = long | append:point.lat | append:')' %}
+
+	{% assign points = points | append: name %}
+	{% assign points = points | append: color %}
+	{% assign points = points | append: longlat %}
+
+	{% if forloop.last != true %}
+		{% assign points = points | append:',' %}
+	{% endif %}
+{% endfor %}
+
+<article class="ui-tasting text">
+	<div class="ui-tasting__content">
+		<h1 class="h1">{{ page.title }}</h1>
+		{{ page.content }}
+	</div>
+	<aside class="ui-tasting__map" style="background-image: url('{{ page.mapbox.uri }}/{{ page.mapbox.mapid }}/{{ points }}/{{ page.map_center.long }},{{ page.map_center.lat }},{{ page.map_zoom }}/960x960.png32?access_token={{ page.mapbox.token }}');"></aside>
+</article>

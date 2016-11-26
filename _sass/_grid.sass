@@ -1,0 +1,26 @@
+.page-wrap
+	padding-right: .5em
+	padding-left: .5em
+	+mq
+		padding-right: 3em
+		padding-left: 3em
+	+mq(60em)
+		padding-right: 9em
+		padding-left: 9em
+
+.row
+	display: flex
+	&:after
+		content: ''
+		display: table
+		clear: both
+
+.col,
+.cols
+	float: left
+
+$num-columns: 12
+
+@for $index from 1 through $num-columns
+	.init-#{$index}
+		width: percentage($index / $num-columns)

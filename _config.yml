@@ -1,0 +1,43 @@
+# Site settings
+title: Whisky Societeit Ommen
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/wso" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+defaults:
+  -
+    scope:
+      type: pages
+    values:
+      layout: default
+  -
+    scope:
+      type: tastings
+    values:
+      layout: tasting
+      location: 'Tante Pos, Ommen'
+      map_zoom: 7
+      mapbox:
+        uri: http://api.tiles.mapbox.com/v4
+        mapid: bartveneman.e6b09af7
+        token: pk.eyJ1IjoiYmFydHZlbmVtYW4iLCJhIjoiTTVKc2I3ZyJ9.csOHS1Vb3MXP8pahsc6yTw
+  -
+    scope:
+      type: whiskies
+    values:
+      layout: default
+
+collections:
+  tastings:
+    output: true
+    permalink: /proeverijen/:path/
+  whiskies:
+    output: true
+    permalink: /whiskies/:path/
