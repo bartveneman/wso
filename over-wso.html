@@ -1,0 +1,35 @@
+---
+title: Over de WSO
+---
+
+<div class="page-wrap page-section text">
+	<nav class="breadcrumbs">
+		<ol>
+			<li>
+				<a href="{{ site.baseurl }}">Home</a>
+			</li>
+			<li>{{ page.title }}</li>
+		</ol>
+	</nav>
+	<h1 class="h1">{{ page.title }}</h1>
+	<p>Het doel van de WSO is het vermeerderen van kennis whisky. Dit doen we als vereniging door minimaal vier keer per jaar bijeenkomsten te organiseren waar we kennis opdoen van het distillateproces, smaakontwikkeling, proeftechnieken en andere whiskygerelateerde onderwerpen. Onstaan vanuit een kleine groep liefhebbers is de vereniging nu uitgegroeid tot een groep van ruim dertig leden uit Ommen en omstreken. Onze bijeenkomsten worden ook geregeld bezocht door mensen van buiten de vereniging, bijvoorbeeld als verjaardagscadeau of uit nieuwsgierigheid naar de rijke historie en toekomst van whisky. (INKORTEN)</p>
+</div>
+
+<section class="page-wrap page-section text">
+  <h2 class="h2">De WSO op een rijtje</h2>
+  <ul class="ui-usp">
+    {% for usp in site.data.usps %}
+      <li class="ui-usp__item">
+        <div class="media">
+          <div class="media__img">
+            {% include img/icon-{{ usp.icon }}.svg %}
+          </div>
+          <div class="media__body">
+            <h3>{{ usp.title }}</h3>
+            <p>{{ usp.content }}</p>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

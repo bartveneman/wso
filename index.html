@@ -3,13 +3,13 @@
 
 <section class="ui-masthead ui-masthead--upcoming">
   <div class="page-wrap">
-    {% assign next_up = site.tastings[0] %}
+    {% assign next_up = site.tastings.last %}
     <div class="ui-panel">
       <div class="text">
         <h2 class="h3">Volgende proeverij</h2>
         <div class="ui-table">
           <div class="ui-table__row">
-            <div class="ui-table__data">Datum: {{ next_up.date }}</div>
+            <div class="ui-table__data">Datum: {{ next_up.date | date: "%d-%m-%Y" }}</div>
             <div class="ui-table__data">Locatie: {{ next_up.location }}</div>
           </div>
           <div class="ui-table__row">
@@ -42,6 +42,6 @@
     {% endfor %}
   </ul>
   <div class="text-center">
-    <a href="{{ site.baseurl }}/over-wso/" class="button">Over WSO</a>
+    <a href="{{ site.baseurl }}over-wso/" class="button">Over WSO</a>
   </div>
 </section>

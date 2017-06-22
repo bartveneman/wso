@@ -62,6 +62,10 @@ label
 		margin-bottom: .72rem
 		line-height: 1.2
 
+	+mq
+		h1
+			margin-bottom: 2.88rem
+
 	p, ol ,ul
 		line-height: 1.44
 		margin-bottom: 1.44em
@@ -103,3 +107,40 @@ p a
 		display: block
 	&:hover
 		color: $navy
+
+.ui-date
+	display: block
+	font-size: 1.2em
+	margin-bottom: 2.88rem
+	margin-top: -2.88rem
+
+// Example markup:
+// <nav class="breadcrumbs">
+// 	<ol>
+// 		<li>
+// 			<a href="#">Home</a>
+// 		</li>
+// 		<li>
+// 			<a href="#">Tastings</a>
+// 		</li>
+// 		<li>{{ page.title }}</li>
+// 	</ol>
+// </nav>
+.breadcrumbs
+	margin-bottom: 2.88rem
+	opacity: 0.4
+	transition: opacity 0.2s ease-out
+	&:hover
+		opacity: 1
+	ol
+		list-style: none
+	li
+		display: inline
+		&:not(:last-child)
+			&::after
+				content: '\203A'
+				display: inline
+				margin-left: .5ch
+				margin-right: .5ch
+	a
+		color: $blue

@@ -2,12 +2,20 @@
 title: Proeverijen
 ---
 
-<div class="page-wrap page-section">
+<div class="page-wrap page-section page-content">
+	<nav class="breadcrumbs">
+		<ol>
+			<li>
+				<a href="{{ site.baseurl }}">Home</a>
+			</li>
+			<li>{{ page.title }}</li>
+		</ol>
+	</nav>
 	<div class="text">
 		<h1 class="h1">{{ page.title }}</h1>
 	</div>
 	<nav class="cf">
-		{% for tasting in site.tastings %}
+		{% for tasting in site.tastings reversed %}
 			<a class="ui-card" href="{{ site.baseurl }}/{{ tasting.url }}">
 				<h2 class="ui-card__title">
 					{% assign parts = tasting.theme | split:' ' %}
